@@ -16,6 +16,7 @@ pipeline {
         }
        stage ('Init'){
             steps{
+                sh 'terraform init -migrate-state -no-color'
                 sh 'terraform init --upgrade -no-color'
             }
         }

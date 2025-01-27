@@ -30,9 +30,9 @@ pipeline {
                 sh 'terraform plan -no-color'
             }
         }
-         stage ('apply'){
+         stage ('destroy'){
             steps{
-                sh 'terraform apply --auto-approve -no-color'
+                sh 'terraform destroy --auto-approve -no-color'
             }
         }
     }
